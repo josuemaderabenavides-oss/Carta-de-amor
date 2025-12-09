@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Para mi amor ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --accent:#ff6b9a;
+    --muted:#9aa6b2;
+    --glass: rgba(255,255,255,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:
+    radial-gradient(ellipse at top left,#0b1220 0%, var(--bg) 60%);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  .container{max-width:980px;margin:32px auto;padding:24px;}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .logo{
+    width:72px;height:72px;border-radius:16px;background:linear-gradient(135deg,#ff9bb8,#ff6b9a);
+    display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(255,107,154,0.12);
+  }
+  h1{color:white;font-size:28px;margin:0}
+  p.lead{color:var(--muted);margin:4px 0 0}
+  main{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
+  @media (max-width:880px){main{grid-template-columns:1fr;}}
+  /* Left column: carta + personajes */
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+  .love-letter{color:#f6f8fb;line-height:1.6;font-size:16px}
+  .controls{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+  /* Couples section */
+  .couples{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+  .couple{
+    flex:1 1 180px;min-width:160px;background:var(--glass);padding:12px;border-radius:12px;color:white;display:flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,0.02)
+  }
+  .avatar{
+    width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0b1220);display:flex;align-items:center;justify-content:center;
+    box-shadow:inset 0 -6px 14px rgba(0,0,0,0.35);
+  }
+  .meta{flex:1}
+  .meta h4{margin:0;color:#fff;font-size:15px}
+  .meta p{margin:4px 0 0;color:var(--muted);font-size:13px}
+  /* Right column: heart + quick */
+  .side{
+    position:relative;display:flex;flex-direction:column;gap:12px;
+  }
+  .heart-wrap{display:flex;align-items:center;justify-content:center;padding:20px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));height:260px}
+  /* Animated heart using CSS */
+  .heart{
+    width:140px;height:140px;position:relative;transform:translateY(0);
+    animation:float 3.2s ease-in-out infinite;
+  }
+  .heart:before,.heart:after{
+    content:"";position:absolute;width:100px;height:160px;background:var(--accent);border-radius:100px 100px 0 0;left:20px;top:0;transform:rotate(-45deg);transform-origin:0 100%;
+    box-shadow:0 10px 30px rgba(255,107,154,0.25);
+  }
+  .heart:after{left:0;transform:rotate(45deg);transform-origin:100% 100%}
+  @keyframes float{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.03)}100%{transform:translateY(0) scale(1)}}
+  .quick{padding:14px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+  .small{font-size:13px;color:var(--muted)}
+  footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+  /* tiny heart details */
+  .hearts-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .mini-heart{width:28px;height:28px;border-radius:6px;background:linear-gradient(90deg,#ff9bb8,#ff6b9a);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 14px rgba(255,107,154,0.12)}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">♥︎TÚ</div>
+    <div>
+      <h1>Para la niña que amo</h1>
+      <p class="lead">Un sitio hecho por mí, para ti — con todo mi amor.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="card">
+        <h2 style="color:white;margin:0 0 8px">Carta</h2>
+        <!-- Carta: puedes editar el texto aquí -->
+        <p id="letter" class="love-letter">
+          Mi amor, cada día a tu lado me recuerda lo afortunado que soy: te amo con todo mi corazón y para mí eres la mejor niña del mundo; iluminas mis días con tu sonrisa, me das fuerzas cuando me siento débil y me enseñas lo que significa querer de verdad — no importa lo difícil que sea el camino, jamás te rindas porque tienes en ti una valentía y una ternura que cambian todo, y yo siempre estaré a tu lado para apoyarte, animarte y amarte en cada paso que demos.
+        </p>
+
+        <div class="controls">
+          <button class="btn" id="copyBtn">Copiar carta</button>
+          <button class="btn ghost" id="downloadBtn">Descargar .txt</button>
+          <button class="btn ghost" id="editBtn">Editar carta</button>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 style="color:white;margin:0 0 8px">Parejas (estilo)</h3>
+          <div class="couples">
+            <div class="couple">
+              <div class="avatar" aria-hidden="true">
+                <!-- simple SVG estilizado (genérico) -->
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8.2" cy="7" r="2.6" fill="#ffdede"/>
+                  <rect x="4" y="11" rx="1" ry="1" width="8" height="6" fill="#ffdede"/>
+                  <circle cx="16.2" cy="7" r="2.6" fill="#ffcfe6"/>
+                  <rect x="12" y="11" rx="1" ry="1" width="8" height="6" fill="#ffcfe6"/>
+                </svg>
+              </div>
+              <div class="meta">
+                <h4>Goku &amp; Milk</h4>
+                <p>Una pareja con energía y ternura — así te veo a ti y a mí.</p>
+              </div>
+            </div>
+
+            <div class="couple">
+              <div class="avatar" aria-hidden="true">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7.5" cy="7" r="2.6" fill="#e6f0ff"/>
+                  <rect x="3.4" y="11" rx="1" ry="1" width="8" height="6" fill="#e6f0ff"/>
+                  <circle cx="16.5" cy="7" r="2.6" fill="#efe6ff"/>
+                  <rect x="12.4" y="11" rx="1" ry="1" width="8" height="6" fill="#efe6ff"/>
+                </svg>
+              </div>
+              <div class="meta">
+                <h4>Naruto &amp; Hinata</h4>
+                <p>Ternura, coraje y protección — te prometo lo mismo a ti.</p>
+              </div>
+            </div>
+
+          </div> <!-- /couples -->
+        </div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="card heart-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <div class="heart" aria-hidden="true"></div>
+        <div style="color:white;font-weight:600;margin-top:12px">Te amo</div>
+        <div style="color:var(--muted);font-size:13px">Siempre y para siempre</div>
+      </div>
+
+      <div class="card quick">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700;color:white">Detalles rápidos</div>
+            <div class="small">Comparte esto en tu estado o envíaselo por mensaje</div>
+          </div>
+          <div>
+            <div class="mini-heart">♥</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <strong style="color:white">Ideas:</strong>
+          <ul style="color:var(--muted);padding-left:18px;margin:8px 0 0">
+            <li>Personaliza la carta con su apodo.</li>
+            <li>Agrega una foto en la sección avatar (reemplaza el SVG).</li>
+            <li>Descárgalo como .txt y guárdalo en tu móvil.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card small" style="text-align:center">
+        <div style="font-weight:600;color:white">Corazones</div>
+        <div class="hearts-row" style="justify-content:center">
+          <div class="mini-heart">❤</div>
+          <div class="mini-heart">❤</div>
+          <div class="mini-heart">❤</div>
+          <div class="mini-heart">❤</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div>Hecho con cariño ❤️ — Puedes modificar cualquier palabra en la carta.</div>
+  </footer>
+</div>
+
+<script>
+  // Copiar carta
+  const copyBtn = document.getElementById('copyBtn');
+  const letterEl = document.getElementById('letter');
+  copyBtn.addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText(letterEl.textContent.trim());
+      copyBtn.textContent = '¡Copiado!';
+      setTimeout(()=>copyBtn.textContent='Copiar carta',1200);
+    }catch(e){
+      alert('No se pudo copiar. Selecciona y copia manualmente.');
+    }
+  });
+
+  // Descargar carta como .txt
+  document.getElementById('downloadBtn').addEventListener('click', () => {
+    const text = letterEl.textContent.trim();
+    const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'carta_para_mi_amor.txt';
+    document.body.appendChild(a); a.click();
+    a.remove(); URL.revokeObjectURL(url);
+  });
+
+  // Editar carta en sitio (simple)
+  document.getElementById('editBtn').addEventListener('click', () => {
+    const current = letterEl.textContent.trim();
+    const newText = prompt('Edita tu carta:', current);
+    if(newText !== null){
+      letterEl.textContent = newText;
+    }
+  });
+
+  // pequeña mejora: guarda en localStorage
+  const STORAGE_KEY = 'mi_carta_para_ella_v1';
+  // cargar
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if(saved) letterEl.textContent = saved;
+  // guardar cada vez que el usuario edite (detectamos cambios con el botón editar)
+  document.getElementById('editBtn').addEventListener('click', ()=> {
+    setTimeout(()=> localStorage.setItem(STORAGE_KEY, letterEl.textContent.trim()), 600);
+  });
+</script>
+</body>
+</html>
